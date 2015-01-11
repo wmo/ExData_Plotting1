@@ -37,7 +37,7 @@ df<-read.table(filename_subset, header=T, sep="\t", colClasses=customColClasses)
 # STEP 3: the actual plotting 
 par(mfrow=c(2,2))
     # plot 1
-plot(df$Date, df$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="" )
+plot(df$Date, df$Global_active_power, type="l", ylab="Global Active Power", xlab="" )
     # plot 2
 plot(df$Date, df$Voltage, type="l", ylab="Voltage", xlab="datetime" )
     # plot 3
