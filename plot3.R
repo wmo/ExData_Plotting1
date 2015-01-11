@@ -11,8 +11,7 @@ outputfilename<-"plot3.png"
 if(!file.exists(filename_subset)) {
     if(!file.exists(filename)) {
         # if the original datafile is missing, then we can't do anything
-        print(paste("Original data file '",filename,"' is missing from working directory!",sep=""))
-        return
+        stop("Original data file '",filename,"' is missing from working directory!")
     }
     # read the data into a data.table (for speed reasons). All columns are character type, to avoid automatic conversions.
     dt<-fread( filename, sep=";", colClasses=rep("character",9), na.strings="?")
